@@ -1,19 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: 'Sora', sans-serif;
 }
+
 body {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #e0e0e0;
+  background: #000000;
 }
 
-.container{
+.container {
   width: 300px;
   height: auto;
   padding: 40px 30px;
@@ -25,12 +27,12 @@ body {
   border-radius: 15px;
 }
 
-h4{
+h4 {
   font-size: 20px;
   color: #121212;
 }
 
-.form{
+.form {
   width: 100%;
   height: auto;
   display: flex;
@@ -39,7 +41,7 @@ h4{
   padding-top: 20px;
 }
 
-.input_field_box{
+.input-feild {
   width: 100%;
   height: auto;
   display: flex;
@@ -47,30 +49,32 @@ h4{
   justify-content: space-evenly;
 }
 
-.input_field_box input{
+.input-feild input {
   border: none;
   max-width: 20%;
   height: 60px;
   text-align: center;
   border-radius: 5px;
   background: #f0f0f0;
+  border: 2px solid rgb(255, 255, 255);
   font-size: 25px;
+  transition: all 0.3s ease;
 }
 
-.input_field_box input::-webkit-inner-spin-button,
-.input_field_box input::-webkit-outer-spin-button {
+.input-feild input::-webkit-inner-spin-button,
+.input-feild input::-webkit-outer-spin-button {
   display: none;
 }
 
-.input_field_box input:focus{
-  outline: 1.5px solid #00b991;
-  outline-offset: 2px;
+.input-feild input:focus {
+  border: 2px solid black;
+  transition: all 0.3s ease;
 }
 
 form button {
   margin-top: 25px;
   width: 92%;
-  color: #525252;
+  color: #ffffff;
   font-size: 16px;
   padding: 10px 0;
   font-weight: 600;
@@ -78,14 +82,16 @@ form button {
   border-radius: 6px;
   pointer-events: none;
   cursor: pointer;
-  background: #e9d585;
+  background: #608aff;
   transition: all 0.2s ease;
 }
+
 form button.active {
-  background: #ffcc00;
+  background: #4070f4;
   pointer-events: auto;
-  color: #000000;
+  color: #ffffff;
 }
+
 form button:hover {
-  background: #e6b801;
+  background: #376cff;
 }

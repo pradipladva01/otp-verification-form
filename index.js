@@ -8,7 +8,7 @@ OTPinputs.forEach((input) => {
     const currentInput = input;
     const nextInput = input.nextElementSibling;
 
-    if (currentInput.value.length > 1 && currentInput.value.length == 2 ) {
+    if (currentInput.value.length > 1 && currentInput.value.length == 2) {
       currentInput.value = "";
     }
 
@@ -16,30 +16,30 @@ OTPinputs.forEach((input) => {
       nextInput.removeAttribute("disabled");
       nextInput.focus();
     }
-    
+
     if (!OTPinputs[3].disabled && OTPinputs[3].value !== "") {
       button.classList.add("active");
-    }else{
+    } else {
       button.classList.remove("active");
     }
-    
+
   });
 
 
   input.addEventListener("keyup", (e) => {
-      if (e.key === "Backspace") {
-        if(input.previousElementSibling !== null){
-          e.target.value = "";
-          e.target.setAttribute("disabled", true);
-          input.previousElementSibling.focus();
-        }
+    if (e.key === "Backspace") {
+      if (input.previousElementSibling !== null) {
+        e.target.value = "";
+        e.target.setAttribute("disabled", true);
+        input.previousElementSibling.focus();
       }
+    }
   })
 
 });
 
 button.addEventListener("click", () => {
-  alert("OTP Sent")
+  alert("OTP Sent Successfully")
 })
 
 
